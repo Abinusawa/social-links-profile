@@ -12,17 +12,21 @@
     <div class="container bg-neutral-900 items-center max-w-sm md:max-w-md lg:max-w-lg w-full h-auto rounded-lg shadow-lg p-5">
         <div class="inner__container flex p-5 flex-col items-center">
             <!-- Profile Info -->
-            <div class="info__container flex flex-col items-center mb-5">
-                <img src="./assets/images/me.jpeg" alt="Profile Picture" class="w-[100px] h-[100px] rounded-full mb-5 border-4 border-gray-600">
-                <h1 class="text-white text-xl md:text-2xl font-bold mb-2">Abinusawa Opeyemi</h1>
-                <p class="text-gray-400 text-sm md:text-base mb-3">Lagos, Nigeria</p>
-                <p class="text-gray-400 text-xs md:text-sm mb-3 text-center">"Front-end Developer || Cyber Security Enthusiast ."</p>
+            <div class=" info__container flex flex-col items-center mb-5" >
+                <img src="./assets/images/me.jpeg" alt="Profile Picture" class=" profilePicture w-[100px] h-[100px] rounded-full mb-5 border-4 border-gray-600" data-testid="profilePicture">
+                <h1 class=" fullName text-white text-xl md:text-2xl font-bold mb-2" data-testid="fullName">Abinusawa Opeyemi</h1>
+                <p class=" emailAddress text-gray-400 text-sm md:text-base mb-3" data-testid="emailAddress" >aopeyemi906@gmail.com</p>
+                <p class=" currentLocation text-gray-400 text-sm md:text-base mb-3" data-testid="currentLocation" >Lagos, Nigeria</p>
+                <p class="job-Title text-gray-400 text-xs md:text-sm mb-3 text-center" data-testid="jobTitle">"Front-end Developer || Cyber Security Enthusiast ."</p>
+                <p class="shortBio text-gray-400 text-xs md:text-sm mb-3 text-center" data-testid="shortBio">Cybersecurity enthusiast and front-end developer passionate about building secure, user-friendly web applications. Always exploring new technologies and best practices in both cybersecurity and web development.</p>
             </div>
+            <p class="text-gray-400 text-xs md:text-sm mb-3 text-center">
+                Time: <span id="utc-time"></span>
+            </p>
 
             <!-- Social Links -->
-            <div class="links__container flex flex-col justify-center w-[230px] gap-y-4">
+            <div class=" socialLinks links__container flex flex-col justify-center w-[230px] gap-y-4" data-testid="socialLinks">
                 <a href="https://github.com/OpeDavid-SOC" class="w-full max-w-[220px] h-[40px] bg-neutral-800 hover:bg-green-600 transition text-white text-sm flex justify-center rounded-lg items-center">Github</a>
-                <!-- <a href="https://www.frontendmentor.io/" class="w-full max-w-[220px] h-[40px] bg-neutral-800 hover:bg-green-600 transition text-white text-sm flex justify-center rounded-lg items-center">Frontend Mentor</a> -->
                 <a href="https://www.linkedin.com/in/opeyemi-abinusawa-302b19157//" class="w-full max-w-[220px] h-[40px] bg-neutral-800 hover:bg-green-600 transition text-white text-sm flex justify-center rounded-lg items-center">LinkedIn</a>
                 <a href="https://twitter.com/" class="w-full max-w-[220px] h-[40px] bg-neutral-800 hover:bg-green-600 transition text-white text-sm flex justify-center rounded-lg items-center">Twitter</a>
                 <a href="https://instagram.com/" class="w-full max-w-[220px] h-[40px] bg-neutral-800 hover:bg-green-600 transition text-white text-sm flex justify-center rounded-lg items-center">Instagram</a>
@@ -30,4 +34,18 @@
         </div>
     </div>
 </body>
+<script src="index.js"></script>
+<!-- <script>
+/*************  ✨ Codeium Command ⭐  *************/
+    /**
+/******  e18d8930-0719-4ef1-86f5-70ba23c11522  *******/
+    function updateUTCTime() {
+        const utcTimeElement = document.getElementById("utc-time");
+        const now = new Date();
+        utcTimeElement.textContent = now.toUTCString();
+    }
+
+    // Update the time when the page loads
+    updateUTCTime();
+</script> -->
 </html>
